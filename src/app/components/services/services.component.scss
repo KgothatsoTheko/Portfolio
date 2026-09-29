@@ -11,13 +11,13 @@ article {
 }
 article > span {
   font:
-    0.65rem "Courier New",
+    0.65rem Arial,
     monospace;
   color: var(--accent);
 }
 h3 {
   font:
-    1.75rem/1.2 Georgia,
+    1.75rem/1.2 "Poppins",
     serif;
   margin-block: 24px 16px;
 }
@@ -28,7 +28,7 @@ article p {
 small {
   display: block;
   font:
-    0.67rem/1.8 "Courier New",
+    0.67rem/1.8 Arial,
     monospace;
   color: var(--muted);
   margin-top: 24px;

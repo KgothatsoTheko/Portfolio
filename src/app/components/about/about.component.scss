@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 .about-section {
   background: var(--wash);
 }
@@ -15,7 +17,7 @@ h2 em {
 }
 .margin-note {
   font:
-    italic 1.2rem/1.6 Georgia,
+    italic 1.2rem/1.6 "Poppins",
     serif;
   color: var(--muted);
   border-left: 2px solid var(--gold);
@@ -36,7 +38,7 @@ h2 em {
 }
 .principles span {
   font:
-    0.7rem "Courier New",
+    0.7rem Arial,
     monospace;
   color: var(--accent);
 }

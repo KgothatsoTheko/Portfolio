@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 .contact-section {
   background: var(--wash);
 }
@@ -27,12 +28,12 @@ h2 em {
   gap: 18px;
   margin-top: 20px;
   font:
-    0.7rem/1.8 "Courier New",
+    0.7rem/1.8 "Arial",
     monospace;
 }
 .contact-note {
   font:
-    italic 1.1rem Georgia,
+    italic 1.1rem "Poppins",
     serif;
   color: var(--muted);
   margin-top: 50px;
