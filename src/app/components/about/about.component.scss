@@ -61,9 +61,24 @@ h2 em {
   padding: 26px 0;
   border-top: 1px solid var(--line);
 }
+.timeline-meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.company-logo {
+  width: 164px;
+  height: 164px;
+  object-fit: contain;
+  object-position: left center;
+  border-radius: 10px;
+  background: var(--surface);
+  padding: 8px;
+  border: 1px solid var(--line);
+}
 .date {
   font:
-    1.8 "Arial",
+    1.8 Arial,
     monospace;
   color: var(--muted);
 }
