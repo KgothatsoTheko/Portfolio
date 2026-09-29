@@ -1,0 +1,102 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+:host {
+  display: contents;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  height: 88px;
+  gap: 24px;
+}
+.brand {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.1em;
+  text-decoration: none;
+}
+.brand span {
+  color: var(--gold);
+}
+.brand-note {
+  font-family: "Courier New", monospace;
+  font-size: 0.65rem;
+  line-height: 1.5;
+  border-left: 1px solid var(--line);
+  padding-left: 24px;
+  color: var(--muted);
+}
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 32px;
+}
+nav a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding-block: 8px;
+}
+nav a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.theme-toggle,
+.menu-toggle {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+}
+.theme-toggle {
+  font-size: 1.3rem;
+}
+.menu-toggle {
+  display: none;
+  border-radius: 3px;
+  padding: 6px 12px;
+}
+@media (max-width: 760px) {
+  .header-inner {
+    height: 76px;
+    gap: 12px;
+  }
+  .brand-note {
+    font-size: 0.6rem;
+    padding-left: 12px;
+  }
+  .theme-toggle {
+    margin-left: auto;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    inset-inline: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding: 20px;
+  }
+  nav.open {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  nav a {
+    padding: 8px 0;
+  }
+}
+@media (max-width: 370px) {
+  .brand-note {
+    display: none;
+  }
+}

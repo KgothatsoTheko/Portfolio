@@ -1,0 +1,114 @@
+<section class="about-section" id="about" aria-labelledby="about-title">
+  <div class="container section">
+    <div class="about-grid">
+      <div>
+        <p class="eyebrow">02 / A little context</p>
+        <h2 id="about-title">
+          A polymath's curiosity.<br /><em>A builder's instinct.</em>
+        </h2>
+        <p class="margin-note">
+          There is always something<br />worth understanding better.
+        </p>
+      </div>
+      <div class="about-copy">
+        <p>
+          I like following a problem far enough to understand what it actually
+          needs. Sometimes that means writing an API. Sometimes it means
+          rethinking an interface, checking a targeting rule, or connecting a
+          CRM to the process around it.
+        </p>
+        <p>
+          My foundation is full-stack engineering. Working across GTM systems,
+          Salesforce, and security training gives me different ways to look at
+          the same problem.
+        </p>
+        <p>
+          <strong>Kaizen keeps me moving.</strong> Notice the friction. Make a
+          useful change. Learn from what happens. That can be a cleaner
+          component, a better qualification rule, or documentation that makes
+          the next person's job easier.
+        </p>
+        <p>
+          Education, community platforms, and accessible public services are
+          areas I care about. CampusHub and my work on Focused Network reflect
+          that interest.
+        </p>
+      </div>
+    </div>
+    <div class="principles">
+      <div>
+        <span>01</span>
+        <h3>Understand the problem.</h3>
+        <p>
+          Start with the people, decisions, and constraints around the work.
+        </p>
+      </div>
+      <div>
+        <span>02</span>
+        <h3>Build something useful.</h3>
+        <p>
+          Put the idea into practice. Make it clear enough for someone else to
+          use.
+        </p>
+      </div>
+      <div>
+        <span>03</span>
+        <h3>Keep improving it.</h3>
+        <p>
+          Pay attention to what happens next. Refine the parts that need it.
+        </p>
+      </div>
+    </div>
+    <div class="experience" id="experience">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The journey so far</p>
+          <h2>Learning through work.</h2>
+        </div>
+        <p>
+          Current roles, earlier chapters, and the experience connecting them.
+        </p>
+      </div>
+      <div class="timeline">
+        <article *ngFor="let item of experience">
+          <p class="date">{{ item.date }}</p>
+          <div>
+            <h3>{{ item.company }}</h3>
+            <p class="role">{{ item.role }}</p>
+            <p class="description">{{ item.description }}</p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="education">
+      <p class="eyebrow">Foundations</p>
+      <div>
+        <h3>Computer & Information Science</h3>
+        <p>
+          Bachelor's degree in Application Development · Distinction<br />Varsity
+          College Waterfall (Emeris) · 2022–2024
+        </p>
+      </div>
+      <div>
+        <h3>IT & Support Services</h3>
+        <p>
+          Higher Certificate · Distinction<br />Varsity College Waterfall
+          (Emeris) · 2021
+        </p>
+      </div>
+      <div>
+        <h3>Cybersecurity</h3>
+        <p>Google Cybersecurity Professional Certificate<br />December 2025</p>
+      </div>
+    </div>
+    <details class="earlier">
+      <summary>Before software</summary>
+      <p>
+        A three-month Call Interaction Agent learnership at Blue Label
+        Distribution gave me an early view of customer support: listening
+        carefully, answering questions, and working through problems with
+        people.
+      </p>
+    </details>
+  </div>
+</section>

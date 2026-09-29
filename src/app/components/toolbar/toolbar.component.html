@@ -1,0 +1,47 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a
+      class="brand"
+      routerLink="/landing"
+      fragment="homepage"
+      aria-label="Kgothatso Theko, home"
+      (click)="closeMenu()"
+      >KG<span>.</span></a
+    >
+    <span class="brand-note">A work in progress.<br />Always building.</span>
+    <nav
+      id="site-navigation"
+      aria-label="Main navigation"
+      [class.open]="menuOpen"
+    >
+      <a
+        *ngFor="let item of menuItems"
+        routerLink="/landing"
+        [fragment]="item.target"
+        (click)="closeMenu()"
+        >{{ item.label }}</a
+      >
+    </nav>
+    <button
+      type="button"
+      class="theme-toggle"
+      (click)="toggleTheme()"
+      [attr.aria-label]="
+        isDark ? 'Switch to light theme' : 'Switch to dark theme'
+      "
+      [attr.aria-pressed]="isDark"
+    >
+      <span aria-hidden="true">{{ isDark ? "☀" : "◐" }}</span>
+    </button>
+    <button
+      type="button"
+      id="menu-toggle"
+      class="menu-toggle"
+      (click)="menuOpen = !menuOpen"
+      [attr.aria-expanded]="menuOpen"
+      aria-controls="site-navigation"
+    >
+      {{ menuOpen ? "Close" : "Menu" }}
+    </button>
+  </div>
+</header>

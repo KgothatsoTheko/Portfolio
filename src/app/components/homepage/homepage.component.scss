@@ -1,0 +1,191 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 70px;
+  padding-block: 70px 80px;
+  align-items: center;
+}
+h1 {
+  font-size: clamp(3.5rem, 6.5vw, 6rem);
+  margin-block: 25px 28px;
+}
+h1 em {
+  color: var(--accent);
+  font-weight: 400;
+}
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+.description {
+  color: var(--muted);
+  max-width: 480px;
+  font-size: 0.98rem;
+}
+.actions {
+  margin-top: 28px;
+}
+.hero-links {
+  display: flex;
+  gap: 28px;
+  margin-top: 22px;
+  font-family: "Courier New", monospace;
+  font-size: 0.75rem;
+}
+.portrait {
+  margin: 0;
+  background: var(--wash);
+  border: 1px solid var(--line);
+  padding: 20px 24px 24px;
+  transform: rotate(2deg);
+}
+.portrait-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font:
+    0.58rem "Courier New",
+    monospace;
+  letter-spacing: 0.04em;
+}
+.portrait-image {
+  position: relative;
+  height: 395px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  margin-top: 20px;
+}
+.portrait-image img {
+  width: auto;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  object-fit: contain;
+  object-position: bottom;
+}
+.portrait-word {
+  position: absolute;
+  font:
+    bold clamp(4.5rem, 7vw, 7rem) Arial,
+    sans-serif;
+  letter-spacing: -0.08em;
+  opacity: 0.1;
+  top: 28px;
+  left: 2%;
+}
+figcaption {
+  position: relative;
+  padding-top: 18px;
+}
+.note-label {
+  font:
+    0.58rem "Courier New",
+    monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+figcaption p {
+  font:
+    1.8rem/1.12 Georgia,
+    serif;
+  margin-top: 10px;
+}
+.handwritten {
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+  color: var(--accent);
+  font:
+    italic 0.95rem Georgia,
+    serif;
+  transform: rotate(-7deg);
+}
+.practice-strip {
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding-block: 18px;
+}
+.practice-strip .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  font:
+    0.72rem "Courier New",
+    monospace;
+  letter-spacing: 0.08em;
+}
+.now {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1.4fr 1fr;
+  align-items: center;
+  gap: 24px;
+  padding-block: 30px;
+}
+.now strong {
+  font-size: 0.87rem;
+  display: block;
+}
+.now p > span {
+  color: var(--muted);
+  font-size: 0.75rem;
+  display: block;
+}
+@media (max-width: 1000px) {
+  .hero {
+    gap: 32px;
+  }
+  .portrait {
+    padding: 16px;
+  }
+  .portrait-image {
+    height: 350px;
+  }
+  .handwritten {
+    position: static;
+    display: block;
+    margin-top: 10px;
+    transform: none;
+  }
+  .now {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-block: 48px;
+    gap: 48px;
+  }
+  h1 {
+    font-size: clamp(3.3rem, 12vw, 5rem);
+  }
+  .portrait {
+    max-width: 420px;
+    width: 94%;
+    margin: auto;
+    transform: rotate(1deg);
+  }
+  .portrait-image {
+    height: 340px;
+  }
+  .handwritten {
+    position: absolute;
+  }
+  .practice-strip .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.63rem;
+    row-gap: 12px;
+  }
+  .practice-strip .container > span[aria-hidden] {
+    display: none;
+  }
+  .now {
+    gap: 20px;
+  }
+  .now > .eyebrow,
+  .now > a {
+    grid-column: 1/-1;
+  }
+}

@@ -1,0 +1,168 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+.filters button {
+  background: transparent;
+  color: var(--muted);
+  padding: 9px 17px;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  font-size: 0.78rem;
+}
+.filters button.active {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 24px;
+}
+.project {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+}
+.project-visual {
+  display: flex;
+  height: 220px;
+  background: var(--wash);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  text-decoration: none;
+}
+.project-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 14px;
+  transition: transform 0.25s;
+}
+.project-visual:hover img {
+  transform: scale(1.025);
+}
+.typographic {
+  padding: 23px;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+.visual-label,
+.visual-footer {
+  font:
+    0.6rem "Courier New",
+    monospace;
+  letter-spacing: 0.07em;
+}
+.visual-label {
+  align-self: flex-start;
+  padding: 4px 8px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.visual-mark {
+  font:
+    italic 1.8rem/1.12 Georgia,
+    serif;
+  max-width: 210px;
+  background: var(--wash);
+  padding: 8px 0;
+}
+.visual-footer {
+  display: flex;
+  justify-content: space-between;
+  background: var(--wash);
+}
+.project-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.project-body .eyebrow {
+  font-size: 0.58rem;
+}
+h3 {
+  margin-block: 10px 12px;
+}
+.summary {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.stack {
+  font:
+    0.66rem/1.6 "Courier New",
+    monospace;
+  color: var(--muted);
+  margin-block: 22px;
+}
+.project-body > a {
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 0.78rem;
+}
+.archive {
+  border-block: 1px solid var(--line);
+  margin-top: 42px;
+  padding-block: 20px;
+}
+summary {
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+summary > span {
+  float: right;
+  font:
+    0.7rem "Courier New",
+    monospace;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  padding-block: 28px 10px;
+}
+.archive-grid a {
+  font-size: 0.83rem;
+  text-decoration: none;
+}
+.archive-grid a:hover {
+  text-decoration: underline;
+}
+.archive-grid span {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+@media (max-width: 1000px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .archive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .project-grid,
+  .archive-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-visual {
+    height: 240px;
+  }
+  .filters button {
+    padding: 8px 13px;
+  }
+}

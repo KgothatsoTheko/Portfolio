@@ -1,0 +1,95 @@
+.contact-section {
+  background: var(--wash);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+}
+h2 {
+  margin-top: 20px;
+}
+h2 em {
+  color: var(--accent);
+}
+.contact-intro {
+  font-size: 0.93rem;
+  color: var(--muted);
+  margin-block: 25px;
+}
+.email {
+  font-size: 1rem;
+  overflow-wrap: anywhere;
+}
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 20px;
+  font:
+    0.7rem/1.8 "Courier New",
+    monospace;
+}
+.contact-note {
+  font:
+    italic 1.1rem Georgia,
+    serif;
+  color: var(--muted);
+  margin-top: 50px;
+}
+label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+input,
+textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 12px;
+  background: var(--paper);
+  color: var(--ink);
+  margin-bottom: 18px;
+}
+textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+.name-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.button {
+  width: 100%;
+}
+.field-error {
+  color: #a32e20;
+  font-size: 0.75rem;
+  display: block;
+  margin-block: -10px 16px;
+}
+:host-context(.dark) .field-error {
+  color: #ffb5a8;
+}
+.form-status {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  min-height: 24px;
+}
+@media (max-width: 850px) {
+  .contact-grid {
+    gap: 40px;
+  }
+}
+@media (max-width: 700px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-note {
+    margin-top: 28px;
+  }
+}

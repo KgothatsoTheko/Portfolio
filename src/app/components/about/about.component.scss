@@ -1,0 +1,129 @@
+.about-section {
+  background: var(--wash);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+h2 {
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  margin-top: 18px;
+}
+h2 em {
+  color: var(--accent);
+}
+.margin-note {
+  font:
+    italic 1.2rem/1.6 Georgia,
+    serif;
+  color: var(--muted);
+  border-left: 2px solid var(--gold);
+  padding-left: 20px;
+  margin-top: 32px;
+}
+.about-copy p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+  padding-block: 50px;
+  margin-top: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.principles span {
+  font:
+    0.7rem "Courier New",
+    monospace;
+  color: var(--accent);
+}
+.principles h3 {
+  font-size: 1rem;
+  margin-block: 12px;
+}
+.principles p {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+.experience {
+  padding-top: 72px;
+  scroll-margin-top: 100px;
+}
+.timeline article {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 40px;
+  padding: 26px 0;
+  border-top: 1px solid var(--line);
+}
+.date {
+  font:
+    0.75rem/1.8 "Courier New",
+    monospace;
+  color: var(--muted);
+}
+.role {
+  color: var(--accent);
+  font-size: 0.85rem;
+  margin-block: 4px 12px;
+}
+.description {
+  font-size: 0.87rem;
+  color: var(--muted);
+}
+.education {
+  display: grid;
+  grid-template-columns: 0.65fr repeat(3, 1fr);
+  gap: 25px;
+  border-top: 1px solid var(--line);
+  padding-top: 36px;
+  margin-top: 26px;
+}
+.education h3 {
+  font-size: 0.9rem;
+}
+.education p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 0.76rem;
+  margin-top: 10px;
+}
+.earlier {
+  margin-top: 30px;
+  color: var(--muted);
+  font-size: 0.83rem;
+}
+.earlier summary {
+  cursor: pointer;
+}
+.earlier p {
+  margin-top: 12px;
+}
+@media (max-width: 800px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .education {
+    grid-template-columns: 1fr 1fr;
+  }
+  .timeline article {
+    grid-template-columns: 170px 1fr;
+    gap: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .principles {
+    grid-template-columns: 1fr;
+    padding-block: 30px;
+  }
+  .timeline article {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .education {
+    grid-template-columns: 1fr;
+  }
+}

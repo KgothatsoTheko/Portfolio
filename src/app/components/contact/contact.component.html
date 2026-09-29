@@ -1,0 +1,129 @@
+<section class="contact-section" id="contact" aria-labelledby="contact-title">
+  <div class="container section contact-grid">
+    <div>
+      <p class="eyebrow">04 / Start a conversation</p>
+      <h2 id="contact-title">What are you<br /><em>working on?</em></h2>
+      <p class="contact-intro">
+        A product to build, a workflow to untangle, or an idea worth exploring.
+        Tell me a little about it.
+      </p>
+      <a class="email" href="mailto:kgothatsotheko7@gmail.com"
+        >kgothatsotheko7&#64;gmail.com ↗</a
+      >
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/kgothatso-theko/"
+          target="_blank"
+          rel="noopener"
+          >LinkedIn ↗</a
+        ><a
+          href="https://github.com/KgothatsoTheko"
+          target="_blank"
+          rel="noopener"
+          >GitHub ↗</a
+        ><a href="tel:+995591065828">+995 591 065 828</a>
+      </div>
+      <p class="contact-note">Useful work starts with a good conversation.</p>
+    </div>
+    <form
+      [formGroup]="contactForm"
+      (ngSubmit)="sendMessage()"
+      novalidate
+      [attr.aria-busy]="sending"
+    >
+      <div class="name-fields">
+        <div>
+          <label for="first-name">First name</label
+          ><input
+            id="first-name"
+            formControlName="firstName"
+            autocomplete="given-name"
+            required
+            [attr.aria-invalid]="
+              contactForm.controls.firstName.touched &&
+              contactForm.controls.firstName.invalid
+            "
+            aria-describedby="first-error"
+          /><span
+            id="first-error"
+            class="field-error"
+            *ngIf="
+              contactForm.controls.firstName.touched &&
+              contactForm.controls.firstName.invalid
+            "
+            >Enter your first name.</span
+          >
+        </div>
+        <div>
+          <label for="last-name">Last name</label
+          ><input
+            id="last-name"
+            formControlName="lastName"
+            autocomplete="family-name"
+            required
+            [attr.aria-invalid]="
+              contactForm.controls.lastName.touched &&
+              contactForm.controls.lastName.invalid
+            "
+            aria-describedby="last-error"
+          /><span
+            id="last-error"
+            class="field-error"
+            *ngIf="
+              contactForm.controls.lastName.touched &&
+              contactForm.controls.lastName.invalid
+            "
+            >Enter your last name.</span
+          >
+        </div>
+      </div>
+      <label for="email">Email address</label
+      ><input
+        id="email"
+        type="email"
+        formControlName="email"
+        autocomplete="email"
+        required
+        [attr.aria-invalid]="
+          contactForm.controls.email.touched &&
+          contactForm.controls.email.invalid
+        "
+        aria-describedby="email-error"
+      /><span
+        id="email-error"
+        class="field-error"
+        *ngIf="
+          contactForm.controls.email.touched &&
+          contactForm.controls.email.invalid
+        "
+        >Enter a valid email address.</span
+      ><label for="message">What would you like to work on?</label
+      ><textarea
+        id="message"
+        formControlName="message"
+        rows="4"
+        required
+        [attr.aria-invalid]="
+          contactForm.controls.message.touched &&
+          contactForm.controls.message.invalid
+        "
+        aria-describedby="message-error"
+      ></textarea
+      ><span
+        id="message-error"
+        class="field-error"
+        *ngIf="
+          contactForm.controls.message.touched &&
+          contactForm.controls.message.invalid
+        "
+        >Add a short message.</span
+      ><button class="button primary" type="submit" [disabled]="sending">
+        {{ sending ? "Sending…" : "Send message" }}
+        <span aria-hidden="true">↗</span>
+      </button>
+      <p class="form-status" [class.field-error]="hasError" role="status">
+        {{ status }}
+      </p>
+    </form>
+  </div>
+</section>
