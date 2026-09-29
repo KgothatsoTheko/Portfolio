@@ -12,26 +12,24 @@
       </div>
       <div class="about-copy">
         <p>
-          I like following a problem far enough to understand what it actually
-          needs. Sometimes that means writing an API. Sometimes it means
-          rethinking an interface, checking a targeting rule, or connecting a
-          CRM to the process around it.
+          I like getting to the root of a problem instead of just fixing the part I can see. 
+          Sometimes that means writing an API. Other times, it means changing an interface, 
+          fixing a bad targeting rule, or connecting a CRM to the rest of the workflow.
         </p>
         <p>
-          My foundation is full-stack engineering. Working across GTM systems,
-          Salesforce, and security training gives me different ways to look at
-          the same problem.
+          I started with full-stack software engineering, but over time I’ve worked across GTM systems, 
+          Salesforce, automation, and cybersecurity too. 
+          I like that mix because it lets me look at a problem from more than one angle.
         </p>
         <p>
-          <strong>Kaizen keeps me moving.</strong> Notice the friction. Make a
-          useful change. Learn from what happens. That can be a cleaner
-          component, a better qualification rule, or documentation that makes
-          the next person's job easier.
+          <strong>Kaizen keeps me moving.</strong> Find something that could be better. Fix it. See what happens. 
+          Then improve it again. That might be cleaner/organized code, a better qualification rule, 
+          or preparing documentation that makes the next person's job easier.
         </p>
         <p>
-          Education, community platforms, and accessible public services are
-          areas I care about. CampusHub and my work on Focused Network reflect
-          that interest.
+          I’m also interested in building things that are genuinely useful and impactful.
+          Education, community platforms, and accessible public services are a few areas I
+          keep coming back to. Projects like SA-Digital, CampusHub and my work on Focused Network come from that.
         </p>
       </div>
     </div>
@@ -71,9 +69,17 @@
       </div>
       <div class="timeline">
         <article *ngFor="let item of experience">
-          <p class="date">{{ item.date }}</p>
+          <div class="timeline-meta">
+            <img
+              *ngIf="item.logo"
+              class="company-logo"
+              [src]="item.logo"
+              [alt]="item.company + ' logo'"
+            />
+          </div>
           <div>
             <h3>{{ item.company }}</h3>
+            <p class="date">{{ item.date }}</p>
             <p class="role">{{ item.role }}</p>
             <p class="description">{{ item.description }}</p>
           </div>
