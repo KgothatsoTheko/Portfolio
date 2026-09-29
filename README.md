@@ -1,59 +1,106 @@
-# Kgothatso Theko | Engineer & Builder
+# Kgothatso Theko — Engineer & Builder
 
-Angular portfolio for KG's work across software engineering, GTM systems, Salesforce, and automation.
+Personal portfolio of **Kgothatso Theko**, a software engineer and builder focused on full-stack development, systems integration, automation, GTM engineering, Salesforce, and security.
 
-The September 2026 refresh uses a warm paper-and-green visual direction, original portrait and project assets, current experience, and the philosophy of Kaizen expressed through working habits.
+The portfolio brings together selected professional work, personal projects, engineering experience, technical capabilities, and ongoing interests in building practical software systems.
 
-## Run locally
+## Overview
+
+This portfolio is built with **Angular** and presents:
+
+* Software engineering projects
+* GTM and automation systems
+* Salesforce work and capabilities
+* Security-related projects and experience
+* Professional experience and education
+* Engineering services and technical capabilities
+* Contact and professional profile information
+
+The visual design follows a warm, minimal aesthetic with responsive layouts and light/dark theme support.
+
+## Tech Stack
+
+* Angular
+* TypeScript
+* SCSS
+* Angular Material
+* Firebase
+* HTML5
+* CSS3
+* JavaScript
+
+## Features
+
+* Responsive portfolio layout
+* Light and dark themes
+* Project filtering by category
+* Expandable project archive
+* Responsive navigation
+* Angular route and fragment navigation
+* Contact form with validation
+* Resume download
+* Responsive image and asset handling
+* Accessibility-conscious styling
+* Reduced-motion support
+* No external font or icon-font dependencies
+
+## Running Locally
+
+Clone the repository and install the dependencies:
 
 ```bash
+git clone https://github.com/KgothatsoTheko/portfolio.git
+cd portfolio
 npm ci
+```
+
+Start the development server:
+
+```bash
 npm start
 ```
 
-Open the local address printed by Angular CLI (normally http://localhost:4200).
+The application will normally be available at:
 
-## Production build
+```text
+http://localhost:4200
+```
+
+## Production Build
+
+Create a production build with:
 
 ```bash
 npm run build
 ```
 
-Build output: `dist/portfolio`. Existing Firebase configuration is retained. No deployment is performed by the build.
+The compiled application is generated in:
 
-## Where to edit
+```text
+dist/portfolio
+```
 
-- `src/app/components/homepage`: introduction, portrait, CV link, and current work.
-- `src/app/components/projects/projects.component.ts`: selected projects, filters, archive, and project URLs.
-- `src/app/components/about`: biography, principles, experience, education, and credentials.
-- `src/app/components/services`: engineering, integration, GTM, and Salesforce capabilities.
-- `src/app/components/contact`: contact details and reactive contact form.
-- `src/app/components/toolbar`: responsive navigation and saved light/dark preference.
-- `src/styles.scss`: shared typography, spacing, colors, and reduced-motion behavior.
-- `src/index.html`: page title, description, social metadata, and canonical URL.
-- `src/assets/KgothatsoTheko-Resume.pdf`: supplied latest engineering CV.
+The project includes Firebase configuration for deployment, but building the application does not automatically deploy it.
 
-## Behavior
+## Deployment
 
-- Projects filter by Software, GTM & automation, Salesforce, and Security.
-- The earlier project collection remains available in an expandable archive.
-- The theme preference is stored locally when browser storage is available.
-- Navigation uses Angular fragments. Previous `/landing/projects`-style URLs redirect to the matching section.
-- The contact form uses the existing `ApiService` and `send-message` backend endpoint. It validates required fields, prevents duplicate submissions, keeps entered text on errors, and resets only after success.
-- The page makes no external font or icon-font requests.
+The project is configured for Firebase Hosting.
 
-## Verification
+A deployment can be performed through the Firebase CLI after authenticating with a Firebase account and selecting the appropriate project.
 
-Production compilation passed. Browser checks covered:
+## Portfolio
 
-- Desktop, tablet, and mobile widths: 1440, 768, 390, and 320 pixels, with no horizontal overflow.
-- Project filtering, theme persistence, menu navigation, legacy URLs, and sticky-header scroll offsets.
-- Image loading and the engineering PDF download.
-- Invalid form submission, failure recovery, and successful reset using mocked HTTP responses; no real message was sent.
-- No uncaught browser runtime errors in those checks.
+**Website:**
+https://kgothatsotheko.web.app
 
-Two non-blocking component-style budget warnings remain: homepage and projects are about 2.4 kB each against a 2 kB warning threshold; both remain below the 4 kB error threshold. The initial application bundle is about 386 kB, below the existing 500 kB warning threshold.
+**GitHub:**
+https://github.com/KgothatsoTheko
 
-Live email delivery and third-party project availability were not independently verified. Google Play links are labeled as testing pages. Content follows the supplied CVs and profile brief; no new impact percentages or government-adoption claims were added.
+**LinkedIn:**
+https://www.linkedin.com/in/kgothatso-theko/
 
-No live deployment or remote Git push was performed.
+## License
+
+This repository represents the personal portfolio and work of **Kgothatso Theko**.
+
+The source code is available for reference, but portfolio content, personal information, images, resume materials, and project assets should not be reproduced or redistributed without permission.
