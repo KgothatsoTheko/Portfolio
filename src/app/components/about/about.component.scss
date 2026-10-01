@@ -139,7 +139,7 @@ h2 em {
   text-decoration: none;
   transition:
     padding-left 0.2s ease,
-    color 0.2s ease;
+    color 0.2s;
 }
 .credential:last-child {
   border-bottom: 1px solid var(--line);
@@ -163,6 +163,50 @@ h2 em {
 }
 .credential-pending {
   cursor: default;
+}
+.credential-badge {
+  display: grid;
+  grid-template-columns: 72px 1fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 0;
+  border-top: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+  transition:
+    padding-left 0.2s ease,
+    color 0.2s;
+}
+.credential-badge:last-of-type {
+  border-bottom: 1px solid var(--line);
+}
+.badge-image {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.badge-image img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+.badge-info h3 {
+  font-size: 0.95rem;
+  margin: 0;
+}
+.badge-info p {
+  color: var(--muted);
+  font-size: 0.78rem;
+  margin-top: 5px;
+}
+.credential-badge > span {
+  color: var(--accent);
+  font-size: 1rem;
+}
+.credential-badge:hover {
+  padding-left: 8px;
 }
 .credential-pending:hover {
   padding-left: 0;
@@ -240,5 +284,14 @@ h2 em {
   .credentials {
     padding-top: 50px;
     margin-top: 50px;
+  }
+  .credential-badge {
+    grid-template-columns: 58px 1fr auto;
+    gap: 14px;
+  }
+  .badge-image,
+  .badge-image img {
+    width: 52px;
+    height: 52px;
   }
 }

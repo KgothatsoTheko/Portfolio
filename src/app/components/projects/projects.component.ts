@@ -32,7 +32,7 @@ export class ProjectsComponent {
       summary:
         'A campus communication app bringing notices, events, a virtual student card, and JWT-based sign-in into one place.',
       stack: 'Ionic · Angular · REST APIs',
-      url: 'https://play.google.com/apps/testing/com.fourWMInnovations.campusHub',
+      url: 'https://groups.google.com/g/campushub-testers',
       action: 'Android testing page',
       image: 'assets/projects/project9.png',
     },
@@ -46,6 +46,17 @@ export class ProjectsComponent {
       url: 'https://github.com/KgothatsoTheko/Beta-Tester-Recruitment-Engine',
       action: 'Explore the code',
       mark: 'find → enrich → connect',
+    },
+    {
+      name: 'SA-Digital App',
+      category: 'Software',
+      kind: 'SA digital identity and license project',
+      summary:
+        'South African secure digital identity wallet with your profile photo, signature, optional driver license details, and mobile verification QR.',
+      stack: 'Ionic · Angular · REST APIs',
+      url: 'https://groups.google.com/g/campushub-testers',
+      action: 'Android testing page',
+      image: 'assets/projects/SA-Digital-logo1.png',
     },
     {
       name: 'Sales Dashboard',
@@ -65,7 +76,7 @@ export class ProjectsComponent {
       summary:
         'A mobile platform connecting mentorship, announcements, scheduling, and community coordination for Focused Network.',
       stack: 'Ionic · Angular · REST APIs',
-      url: 'https://play.google.com/apps/testing/com.FourWMInnovations.focusNetworkApp',
+      url: 'https://groups.google.com/g/focused-network-testers',
       action: 'Android testing page',
       image: 'assets/projects/project8.png',
     },
